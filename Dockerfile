@@ -1,6 +1,7 @@
 
 FROM ubuntu
-RUN apt update && apt install -y nginx
+RUN apt-get update
+RUN apt-get install apache2 -y
 
 ADD . /var/www/html
 ENTRYPOINT apachectl -D FOREGROUND
